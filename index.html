@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cajun Bay Seafood Menu</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#121212;color:#fff;padding:20px;line-height:1.6}
+.container{max-width:900px;margin:0 auto}
+
+h1{
+  text-align:center;
+  color:#ff9800;
+  margin:30px 0;
+  font-size:32px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.section{margin-bottom:50px}
+
+h2{
+  text-align:center;
+  color:#ffcc00;
+  border-bottom:1px solid #444;
+  padding-bottom:8px;
+  margin-bottom:20px;
+  font-size:22px;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+}
+
+h3{
+  text-align:center;
+  color:#ff9800;
+  margin:18px 0;
+  font-size:18px;
+  text-transform:uppercase;
+}
+
+.tip{
+  text-align:center;
+  color:#ccc;
+  font-size:15px;
+  margin-bottom:16px;
+  font-style:italic;
+}
+
+.item{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:12px;
+  padding:0 10px;
+}
+.name{font-weight:bold}
+.price{color:#ff9800;font-weight:bold}
+.desc{
+  text-align:center;
+  font-size:14px;
+  color:#aaa;
+  margin-bottom:10px;
+}
+
+.choices{
+  text-align:center;
+  line-height:1.8;
+  margin:10px 0;
+}
+
+.combo{
+  margin-bottom:16px;
+  padding-bottom:12px;
+  border-bottom:1px dashed #333;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.combo-header{
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  color:#ffcc00;
+}
+.combo-content{
+  text-align:center;
+  color:#ccc;
+  margin-top:6px;
+  line-height:1.6;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>Cajun Bay Seafood</h1>
+
+<div class="section">
+  <h2>Appetizers</h2>
+  <div class="item"><span class="name">A1. Edamame</span><span class="price">$4.75</span></div>
+  <div class="item"><span class="name">A2. Fried Calamari (6pcs)</span><span class="price">$5.95</span></div>
+  <div class="item"><span class="name">A3. Pork Dumpling (6pcs) Steamed or Deep fry</span><span class="price">$7.25</span></div>
+  <div class="item"><span class="name">A4. Veg Spring Roll (4pcs)</span><span class="price">$5.30</span></div>
+  <div class="item"><span class="name">A5. Chicken Kara-age</span><span class="price">$8.95</span></div>
+  <div class="item"><span class="name">A6. French Fries</span><span class="price">$4.95</span></div>
+</div>
+
+<div class="section">
+  <h2>Rice & Pasta</h2>
+  <div class="item"><span class="name">R1. Beef Fried Rice</span><span class="price">$12.25</span></div>
+  <div class="desc">with egg, onion, scallion and carrots</div>
+
+  <div class="item"><span class="name">R2. Chicken Fried Rice</span><span class="price">$11.25</span></div>
+  <div class="desc">with egg, onion, scallion and carrots</div>
+
+  <div class="item"><span class="name">R3. Combo Fried Rice</span><span class="price">$14.25</span></div>
+  <div class="desc">Chicken, beef with egg, onion, scallion and carrots</div>
+
+  <div class="item"><span class="name">R4. House Pasta</span><span class="price">$15.85</span></div>
+  <div class="desc">shrimp, sausage, pasta with House sauce</div>
+</div>
+
+<div class="section">
+  <h2>Baskets Combo</h2>
+  <div class="item"><span class="name">C1. Catfish(1) & Shrimp(5) basket</span><span class="price">$15.75</span></div>
+  <div class="item"><span class="name">C2. Chicken Tender(1) & Shrimp(5) basket</span><span class="price">$15.75</span></div>
+</div>
+
+<div class="section">
+  <h2>Seafood Boils</h2>
+  <p class="tip">(NOT Louisiana style)</p>
+  <p class="tip">- Every 1 Lb Served with 1 Corn and 2 Potatoes</p>
+  <p class="tip">- Every 0.5 Lb Served with 1 Potato</p>
+
+  <h3>1. Pick Your Seafood</h3>
+  <div class="item"><span class="name">Snow Crab Legs</span><span class="price">$19.75 ½ Lb | $37.00 1 Lb</span></div>
+  <div class="item"><span class="name">Shrimp (Head On)</span><span class="price">$12.75 ½ Lb | $22.00 1 Lb</span></div>
+  <div class="item"><span class="name">Clams</span><span class="price">$8.00 ½ Lb | $15.00 1 Lb</span></div>
+  <div class="item"><span class="name">Frozen Crawfish</span><span class="price">$11.99 1 Lb</span></div>
+  <div class="item"><span class="name">Live crawfish (Seasonal)</span><span class="price">$11.99 1 Lb</span></div>
+  <div class="item"><span class="name">Lobster Tail (1pc 6oz)</span><span class="price">$21.50 pc / 6oz</span></div>
+  <div class="item"><span class="name">Black Mussel</span><span class="price">$8.50 ½ Lb | $16.00 1 Lb</span></div>
+  <div class="item"><span class="name">Shrimp (No Head)</span><span class="price">$12.75 ½ Lb | $23.00 1 Lb</span></div>
+  <div class="item"><span class="name">Scallop</span><span class="price">$18.00 ½ Lb | $35.00 1 Lb</span></div>
+  <div class="item"><span class="name">Shrimp (no shell no head)</span><span class="price">$13.50 ½ Lb | $24.00 1 Lb</span></div>
+
+  <h3>2. Pick Your Flavor Sauce</h3>
+  <div class="choices">Cajun / Lemon Pepper / Garlic Butter / House (Mix All Three)</div>
+
+  <h3>3. Pick Your Spicy Level</h3>
+  <div class="choices">No Spicy / Mild / Medium / Hot / Extra Hot</div>
+
+  <h3>4. Add On The Extra</h3>
+  <div class="choices">
+    Sausage $6.50 ½ Lb<br>
+    Sweet Corn (2) $3.00<br>
+    Broccoli $5.00<br>
+    Boiled Eggs (1) $1.50<br>
+    Potatoes (3) $2.50<br>
+    Pasta $5.00<br>
+    Extra Sauce $4.50
+  </div>
+</div>
+
+<div class="section">
+  <h2>Value Combos</h2>
+
+  <div class="combo">
+    <div class="combo-header"><span>Combo 1</span><span>$34.50</span></div>
+    <div class="combo-content">
+      - ½ Lb Snow Crab Legs<br>
+      - 1 Lb Shrimp (No Head)<br>
+      - 1 Corn & 2 Potatoes
+    </div>
+  </div>
+
+  <div class="combo">
+    <div class="combo-header"><span>Combo 2</span><span>$34.50</span></div>
+    <div class="combo-content">
+      - ½ Lb Snow Crab Legs<br>
+      - ½ Lb Shrimp (No Head)<br>
+      - ½ Lb Crawfish<br>
+      - 1 Corn & 2 Potatoes
+    </div>
+  </div>
+
+  <div class="combo">
+    <div class="combo-header"><span>Combo 3</span><span>$34.50</span></div>
+    <div class="combo-content">
+      - ½ Lb Snow Crab Legs<br>
+      - ½ Lb Shrimp (No Head)<br>
+      - ½ Lb Black Mussels<br>
+      - 1 Corn & 2 Potatoes
+    </div>
+  </div>
+
+  <div class="combo">
+    <div class="combo-header"><span>Combo 4</span><span>$34.50</span></div>
+    <div class="combo-content">
+      - ½ Lb Snow Crab Legs<br>
+      - ½ Lb Shrimp (No Head)<br>
+      - ½ Lb Sausage<br>
+      - 1 Corn & 2 Potatoes
+    </div>
+  </div>
+
+  <div class="combo">
+    <div class="combo-header"><span>Combo 5</span><span>$43.99</span></div>
+    <div class="combo-content">
+      - ½ Lb Snow Crab Legs<br>
+      - ½ Lb Shrimp (No Head)<br>
+      - 1 pc Lobster Tail<br>
+      - 1 Corn & 2 Potatoes
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
