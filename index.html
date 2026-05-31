@@ -1,293 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cajun Bay Seafood Menu</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        body {
-            background-color: #1a1a1a;
-            color: #f0f0f0;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        /* Menu Header */
-        .menu-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .menu-header h1 {
-            font-size: 38px;
-            color: #ff7722;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 10px;
-        }
-
-        .menu-header p {
-            color: #aaa;
-            font-size: 16px;
-        }
-
-        /* Category Section */
-        .category-section {
-            background-color: #262626;
-            border-radius: 12px;
-            padding: 25px 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-
-        .category-title {
-            font-size: 24px;
-            color: #ff7722;
-            border-bottom: 2px solid #444;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Menu Item Row 带图片布局 */
-        .menu-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            font-size: 17px;
-            border-bottom: 1px dashed #333;
-            gap: 15px;
-        }
-
-        .menu-item:last-child {
-            border-bottom: none;
-        }
-
-        .item-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .item-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 6px;
-            object-fit: cover;
-            background-color: #333;
-        }
-
-        .item-name {
-            color: #e0e0e0;
-        }
-
-        .item-price {
-            color: #ffdd99;
-            font-weight: bold;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 600px) {
-            .menu-header h1 {
-                font-size: 28px;
-            }
-            .category-section {
-                padding: 18px 20px;
-            }
-            .category-title {
-                font-size: 20px;
-            }
-            .menu-item {
-                font-size: 15px;
-            }
-            .item-img {
-                width: 40px;
-                height: 40px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cajun Bay Seafood Menu</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Arial', sans-serif;
+}
+body {
+background-color: #1a1a1a;
+color: #f0f0f0;
+max-width: 900px;
+margin: 0 auto;
+padding: 30px 20px;
+}
+/* Menu Header */
+.menu-header {
+text-align: center;
+margin-bottom: 50px;
+}
+.menu-header h1 {
+font-size: 38px;
+color: #ff7722;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+.menu-header p {
+color: #aaa;
+font-size: 16px;
+}
+/* Category Section */
+.category-section {
+background-color: #262626;
+border-radius: 12px;
+padding: 25px 30px;
+margin-bottom: 30px;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.category-title {
+font-size: 24px;
+color: #ff7722;
+border-bottom: 2px solid #444;
+padding-bottom: 12px;
+margin-bottom: 20px;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+/* Menu Item Row 带图片布局 */
+.menu-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+font-size: 17px;
+border-bottom: 1px dashed #333;
+gap: 15px;
+}
+.menu-item:last-child {
+border-bottom: none;
+}
+.item-left {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.item-img {
+width: 50px;
+height: 50px;
+border-radius: 6px;
+object-fit: cover;
+background-color: #333;
+}
+.item-name {
+color: #e0e0e0;
+}
+.item-price {
+color: #ffdd99;
+font-weight: bold;
+}
+/* Mobile Responsive */
+@media (max-width: 600px) {
+.menu-header h1 {
+font-size: 28px;
+}
+.category-section {
+padding: 18px 20px;
+}
+.category-title {
+font-size: 20px;
+}
+.menu-item {
+font-size: 15px;
+}
+.item-img {
+width: 40px;
+height: 40px;
+}
+}
+</style>
 </head>
 <body>
-    <div class="menu-header">
-        <h1>Cajun Bay Seafood</h1>
-        <p>Fresh Seafood Boils & Comfort Food</p>
-    </div>
-
-    <!-- Appetizers 仅这部分加图片，其他完全不变 -->
-    <div class="category-section">
-        <h2 class="category-title">Appetizers</h2>
-        <div class="menu-item">
-            <div class="item-left">
-                <img class="item-img" src="images/edamame.jpg" alt="Edamame">
-                <span class="item-name">Edamame</span>
-            </div>
-            <span class="item-price">US$5.45</span>
-        </div>
-        <div class="menu-item">
-            <div class="item-left">
-                <img class="item-img" src="images/fried_calamari.jpg" alt="Fried Calamari">
-                <span class="item-name">Fried Calamari (6pcs)</span>
-            </div>
-            <span class="item-price">US$5.95</span>
-        </div>
-        <div class="menu-item">
-            <div class="item-left">
-                <img class="item-img" src="images/pork_dumpling.jpg" alt="Pork Dumpling">
-                <span class="item-name">Pork Dumpling (6pcs)</span>
-            </div>
-            <span class="item-price">US$7.95</span>
-        </div>
-        <div class="menu-item">
-            <div class="item-left">
-                <img class="item-img" src="images/veg_spring_roll.jpg" alt="Veg Spring Roll">
-                <span class="item-name">Veg Spring Roll (4pcs)</span>
-            </div>
-            <span class="item-price">US$7.50</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Chicken Kara-age</span>
-            <span class="item-price">US$8.95</span>
-        </div>
-        <div class="menu-item">
-            <div class="item-left">
-                <img class="item-img" src="images/french_fries.jpg" alt="French Fries">
-                <span class="item-name">French Fries</span>
-            </div>
-            <span class="item-price">US$5.25</span>
-        </div>
-        <div class="menu-item">
-            <div class="item-left">
-                <img class="item-img" src="images/crab_rangoon.jpg" alt="Crab Rangoon">
-                <span class="item-name">Crab Rangoon (4pcs)</span>
-            </div>
-            <span class="item-price">US$7.95</span>
-        </div>
-    </div>
-
-    <!-- Rice & Pasta 完全和你原来的一样，没改动 -->
-    <div class="category-section">
-        <h2 class="category-title">Rice & Pasta</h2>
-        <div class="menu-item">
-            <span class="item-name">Beef Fried Rice</span>
-            <span class="item-price">US$14.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Chicken Fried Rice</span>
-            <span class="item-price">US$12.45</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Combo Fried Rice</span>
-            <span class="item-price">US$15.45</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">House Pasta</span>
-            <span class="item-price">US$14.65</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Sausage Fried Rice</span>
-            <span class="item-price">US$13.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Side Fire Rice</span>
-            <span class="item-price">US$4.62</span>
-        </div>
-    </div>
-
-    <!-- Seafood Boils 完全原样 -->
-    <div class="category-section">
-        <h2 class="category-title">Seafood Boils</h2>
-        <div class="menu-item">
-            <span class="item-name">Live Crawfish (Seasonal) 1LB</span>
-            <span class="item-price">US$17.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Snow Crab Legs 1LB</span>
-            <span class="item-price">US$37.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Shrimp (Head On) 1LB</span>
-            <span class="item-price">US$24.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Shrimp (No Head) 1LB</span>
-            <span class="item-price">US$26.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Headless Peeled Shrimp 1LB</span>
-            <span class="item-price">US$22.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Clams 1LB</span>
-            <span class="item-price">US$15.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Black Mussel 1LB</span>
-            <span class="item-price">US$16.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Scallop 1LB</span>
-            <span class="item-price">US$35.25</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Lobster Tail (1pc 6oz)</span>
-            <span class="item-price">US$21.50</span>
-        </div>
-    </div>
-
-    <!-- Value Combos 完全原样 -->
-    <div class="category-section">
-        <h2 class="category-title">Value Combos</h2>
-        <div class="menu-item">
-            <span class="item-name">Combo 1</span>
-            <span class="item-price">US$34.50</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Combo 2</span>
-            <span class="item-price">US$34.50</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Combo 3</span>
-            <span class="item-price">US$34.50</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Combo 4</span>
-            <span class="item-price">US$34.50</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Combo 5</span>
-            <span class="item-price">US$43.99</span>
-        </div>
-    </div>
-
-    <!-- Beverages 完全原样 -->
-    <div class="category-section">
-        <h2 class="category-title">Beverages</h2>
-        <div class="menu-item">
-            <span class="item-name">Pepsi Bottle</span>
-            <span class="item-price">US$2.85</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Voss Still Water, 500mL</span>
-            <span class="item-price">US$3.55</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Crab Cracker (Tool)</span>
-            <span class="item-price">US$3.55</span>
-        </div>
-        <div class="menu-item">
-            <span class="item-name">Poppi Sparkling Prebiotic</span>
-            <span class="item-price">US$2.49</span>
-        </div>
-    </div>
+<div class="menu-header">
+<h1>Cajun Bay Seafood</h1>
+<p>Fresh Seafood Boils & Comfort Food</p>
+</div>
+<!-- Appetizers（只这里加图，Chicken空着，其他不动） -->
+<div class="category-section">
+<h2 class="category-title">Appetizers</h2>
+<div class="menu-item">
+<div class="item-left">
+<img class="item-img" src="images/edamame.jpg" alt="Edamame">
+<span class="item-name">Edamame</span>
+</div>
+<span class="item-price">US$5.45</span>
+</div>
+<div class="menu-item">
+<div class="item-left">
+<img class="item-img" src="images/fried_calamari.jpg" alt="Fried Calamari">
+<span class="item-name">Fried Calamari (6pcs)</span>
+</div>
+<span class="item-price">US$5.95</span>
+</div>
+<div class="menu-item">
+<div class="item-left">
+<img class="item-img" src="images/pork_dumpling.jpg" alt="Pork Dumpling">
+<span class="item-name">Pork Dumpling (6pcs)</span>
+</div>
+<span class="item-price">US$7.95</span>
+</div>
+<div class="menu-item">
+<div class="item-left">
+<img class="item-img" src="images/veg_spring_roll.jpg" alt="Veg Spring Roll">
+<span class="item-name">Veg Spring Roll (4pcs)</span>
+</div>
+<span class="item-price">US$7.50</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Chicken Kara-age</span>
+<span class="item-price">US$8.95</span>
+</div>
+<div class="menu-item">
+<div class="item-left">
+<img class="item-img" src="images/french_fries.jpg" alt="French Fries">
+<span class="item-name">French Fries</span>
+</div>
+<span class="item-price">US$5.25</span>
+</div>
+<div class="menu-item">
+<div class="item-left">
+<img class="item-img" src="images/crab_rangoon.jpg" alt="Crab Rangoon">
+<span class="item-name">Crab Rangoon (4pcs)</span>
+</div>
+<span class="item-price">US$7.95</span>
+</div>
+</div>
+<!-- Rice & Pasta 完全原样 -->
+<div class="category-section">
+<h2 class="category-title">Rice & Pasta</h2>
+<div class="menu-item">
+<span class="item-name">Beef Fried Rice</span>
+<span class="item-price">US$14.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Chicken Fried Rice</span>
+<span class="item-price">US$12.45</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Combo Fried Rice</span>
+<span class="item-price">US$15.45</span>
+</div>
+<div class="menu-item">
+<span class="item-name">House Pasta</span>
+<span class="item-price">US$14.65</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Sausage Fried Rice</span>
+<span class="item-price">US$13.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Side Fire Rice</span>
+<span class="item-price">US$4.62</span>
+</div>
+</div>
+<!-- Seafood Boils 完全原样 -->
+<div class="category-section">
+<h2 class="category-title">Seafood Boils</h2>
+<div class="menu-item">
+<span class="item-name">Live Crawfish (Seasonal) 1LB</span>
+<span class="item-price">US$17.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Snow Crab Legs 1LB</span>
+<span class="item-price">US$37.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Shrimp (Head On) 1LB</span>
+<span class="item-price">US$24.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Shrimp (No Head) 1LB</span>
+<span class="item-price">US$26.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Headless Peeled Shrimp 1LB</span>
+<span class="item-price">US$22.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Clams 1LB</span>
+<span class="item-price">US$15.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Black Mussel 1LB</span>
+<span class="item-price">US$16.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Scallop 1LB</span>
+<span class="item-price">US$35.25</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Lobster Tail (1pc 6oz)</span>
+<span class="item-price">US$21.50</span>
+</div>
+</div>
+<!-- Value Combos 完全原样 -->
+<div class="category-section">
+<h2 class="category-title">Value Combos</h2>
+<div class="menu-item">
+<span class="item-name">Combo 1</span>
+<span class="item-price">US$34.50</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Combo 2</span>
+<span class="item-price">US$34.50</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Combo 3</span>
+<span class="item-price">US$34.50</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Combo 4</span>
+<span class="item-price">US$34.50</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Combo 5</span>
+<span class="item-price">US$43.99</span>
+</div>
+</div>
+<!-- Beverages 完全原样 -->
+<div class="category-section">
+<h2 class="category-title">Beverages</h2>
+<div class="menu-item">
+<span class="item-name">Pepsi Bottle</span>
+<span class="item-price">US$2.85</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Voss Still Water, 500mL</span>
+<span class="item-price">US$3.55</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Crab Cracker (Tool)</span>
+<span class="item-price">US$3.55</span>
+</div>
+<div class="menu-item">
+<span class="item-name">Poppi Sparkling Prebiotic</span>
+<span class="item-price">US$2.49</span>
+</div>
+</div>
 </body>
 </html>
