@@ -75,6 +75,13 @@ height: 50px;
 border-radius: 6px;
 object-fit: cover;
 background-color: #333;
+/* 加个小手鼠标，提示可以点击 */
+cursor: pointer;
+transition: opacity 0.2s;
+}
+/* 鼠标放上去变浅，更明显 */
+.item-img:hover {
+opacity: 0.8;
 }
 .item-name {
 color: #e0e0e0;
@@ -109,33 +116,42 @@ height: 40px;
 <h1>Cajun Bay Seafood</h1>
 <p>Fresh Seafood Boils & Comfort Food</p>
 </div>
-<!-- Appetizers（只这里加图，Chicken空着，其他不动） -->
+
+<!-- Appetizers 全部有图，Chicken 无图保留原样 -->
 <div class="category-section">
 <h2 class="category-title">Appetizers</h2>
 <div class="menu-item">
 <div class="item-left">
+<a href="images/edamame.jpg" target="_blank">
 <img class="item-img" src="images/edamame.jpg" alt="Edamame">
+</a>
 <span class="item-name">Edamame</span>
 </div>
 <span class="item-price">US$5.45</span>
 </div>
 <div class="menu-item">
 <div class="item-left">
+<a href="images/fried_calamari.jpg" target="_blank">
 <img class="item-img" src="images/fried_calamari.jpg" alt="Fried Calamari">
+</a>
 <span class="item-name">Fried Calamari (6pcs)</span>
 </div>
 <span class="item-price">US$5.95</span>
 </div>
 <div class="menu-item">
 <div class="item-left">
+<a href="images/pork_dumpling.jpg" target="_blank">
 <img class="item-img" src="images/pork_dumpling.jpg" alt="Pork Dumpling">
+</a>
 <span class="item-name">Pork Dumpling (6pcs)</span>
 </div>
 <span class="item-price">US$7.95</span>
 </div>
 <div class="menu-item">
 <div class="item-left">
+<a href="images/veg_spring_roll.jpg" target="_blank">
 <img class="item-img" src="images/veg_spring_roll.jpg" alt="Veg Spring Roll">
+</a>
 <span class="item-name">Veg Spring Roll (4pcs)</span>
 </div>
 <span class="item-price">US$7.50</span>
@@ -146,40 +162,70 @@ height: 40px;
 </div>
 <div class="menu-item">
 <div class="item-left">
+<a href="images/french_fries.jpg" target="_blank">
 <img class="item-img" src="images/french_fries.jpg" alt="French Fries">
+</a>
 <span class="item-name">French Fries</span>
 </div>
 <span class="item-price">US$5.25</span>
 </div>
 <div class="menu-item">
 <div class="item-left">
+<a href="images/crab_rangoon.jpg" target="_blank">
 <img class="item-img" src="images/crab_rangoon.jpg" alt="Crab Rangoon">
+</a>
 <span class="item-name">Crab Rangoon (4pcs)</span>
 </div>
 <span class="item-price">US$7.95</span>
 </div>
 </div>
-<!-- Rice & Pasta 完全原样 -->
+
+<!-- Rice & Pasta 全部有图，全部加上 -->
 <div class="category-section">
 <h2 class="category-title">Rice & Pasta</h2>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/beef_fried_rice.jpg" target="_blank">
+<img class="item-img" src="images/beef_fried_rice.jpg" alt="Beef Fried Rice">
+</a>
 <span class="item-name">Beef Fried Rice</span>
+</div>
 <span class="item-price">US$14.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/chicken_fried_rice.jpg" target="_blank">
+<img class="item-img" src="images/chicken_fried_rice.jpg" alt="Chicken Fried Rice">
+</a>
 <span class="item-name">Chicken Fried Rice</span>
+</div>
 <span class="item-price">US$12.45</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/combo_fried_rice.jpg" target="_blank">
+<img class="item-img" src="images/combo_fried_rice.jpg" alt="Combo Fried Rice">
+</a>
 <span class="item-name">Combo Fried Rice</span>
+</div>
 <span class="item-price">US$15.45</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/house_pasta.jpg" target="_blank">
+<img class="item-img" src="images/house_pasta.jpg" alt="House Pasta">
+</a>
 <span class="item-name">House Pasta</span>
+</div>
 <span class="item-price">US$14.65</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/sausage_fried_rice.jpg" target="_blank">
+<img class="item-img" src="images/sausage_fried_rice.jpg" alt="Sausage Fried Rice">
+</a>
 <span class="item-name">Sausage Fried Rice</span>
+</div>
 <span class="item-price">US$13.25</span>
 </div>
 <div class="menu-item">
@@ -187,23 +233,44 @@ height: 40px;
 <span class="item-price">US$4.62</span>
 </div>
 </div>
-<!-- Seafood Boils 完全原样 -->
+
+<!-- Seafood Boils 有图的全部加，没图的不动 -->
 <div class="category-section">
 <h2 class="category-title">Seafood Boils</h2>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/live_crawfish_1lb.jpg" target="_blank">
+<img class="item-img" src="images/live_crawfish_1lb.jpg" alt="Live Crawfish">
+</a>
 <span class="item-name">Live Crawfish (Seasonal) 1LB</span>
+</div>
 <span class="item-price">US$17.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/snow_crab_legs_1lb.jpg" target="_blank">
+<img class="item-img" src="images/snow_crab_legs_1lb.jpg" alt="Snow Crab Legs">
+</a>
 <span class="item-name">Snow Crab Legs 1LB</span>
+</div>
 <span class="item-price">US$37.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/shrimp_head_on_1lb.jpg" target="_blank">
+<img class="item-img" src="images/shrimp_head_on_1lb.jpg" alt="Shrimp Head On">
+</a>
 <span class="item-name">Shrimp (Head On) 1LB</span>
+</div>
 <span class="item-price">US$24.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/shrimp_no_head.jpg" target="_blank">
+<img class="item-img" src="images/shrimp_no_head.jpg" alt="Shrimp No Head">
+</a>
 <span class="item-name">Shrimp (No Head) 1LB</span>
+</div>
 <span class="item-price">US$26.25</span>
 </div>
 <div class="menu-item">
@@ -211,11 +278,21 @@ height: 40px;
 <span class="item-price">US$22.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/clams_1lb.jpg" target="_blank">
+<img class="item-img" src="images/clams_1lb.jpg" alt="Clams">
+</a>
 <span class="item-name">Clams 1LB</span>
+</div>
 <span class="item-price">US$15.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
+<a href="images/black_mussel_1lb.jpg" target="_blank">
+<img class="item-img" src="images/black_mussel_1lb.jpg" alt="Black Mussel">
+</a>
 <span class="item-name">Black Mussel 1LB</span>
+</div>
 <span class="item-price">US$16.25</span>
 </div>
 <div class="menu-item">
@@ -227,7 +304,8 @@ height: 40px;
 <span class="item-price">US$21.50</span>
 </div>
 </div>
-<!-- Value Combos 完全原样 -->
+
+<!-- Value Combos 无图，原样不动 -->
 <div class="category-section">
 <h2 class="category-title">Value Combos</h2>
 <div class="menu-item">
@@ -251,7 +329,8 @@ height: 40px;
 <span class="item-price">US$43.99</span>
 </div>
 </div>
-<!-- Beverages 完全原样 -->
+
+<!-- Beverages 无图，原样不动 -->
 <div class="category-section">
 <h2 class="category-title">Beverages</h2>
 <div class="menu-item">
