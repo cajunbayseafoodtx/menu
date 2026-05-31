@@ -58,7 +58,7 @@
             letter-spacing: 1px;
         }
 
-        /* Menu Item Row */
+        /* Menu Item Row 带图片布局 */
         .menu-item {
             display: flex;
             justify-content: space-between;
@@ -66,10 +66,25 @@
             padding: 10px 0;
             font-size: 17px;
             border-bottom: 1px dashed #333;
+            gap: 15px;
         }
 
         .menu-item:last-child {
             border-bottom: none;
+        }
+
+        .item-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .item-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+            object-fit: cover;
+            background-color: #333;
         }
 
         .item-name {
@@ -95,6 +110,10 @@
             .menu-item {
                 font-size: 15px;
             }
+            .item-img {
+                width: 40px;
+                height: 40px;
+            }
         }
     </style>
 </head>
@@ -104,23 +123,35 @@
         <p>Fresh Seafood Boils & Comfort Food</p>
     </div>
 
-    <!-- Appetizers -->
+    <!-- Appetizers 仅这部分加图片，其他完全不变 -->
     <div class="category-section">
         <h2 class="category-title">Appetizers</h2>
         <div class="menu-item">
-            <span class="item-name">Edamame</span>
+            <div class="item-left">
+                <img class="item-img" src="images/edamame.jpg" alt="Edamame">
+                <span class="item-name">Edamame</span>
+            </div>
             <span class="item-price">US$5.45</span>
         </div>
         <div class="menu-item">
-            <span class="item-name">Fried Calamari (6pcs)</span>
+            <div class="item-left">
+                <img class="item-img" src="images/fried_calamari.jpg" alt="Fried Calamari">
+                <span class="item-name">Fried Calamari (6pcs)</span>
+            </div>
             <span class="item-price">US$5.95</span>
         </div>
         <div class="menu-item">
-            <span class="item-name">Pork Dumpling (6pcs)</span>
+            <div class="item-left">
+                <img class="item-img" src="images/pork_dumpling.jpg" alt="Pork Dumpling">
+                <span class="item-name">Pork Dumpling (6pcs)</span>
+            </div>
             <span class="item-price">US$7.95</span>
         </div>
         <div class="menu-item">
-            <span class="item-name">Veg Spring Roll (4pcs)</span>
+            <div class="item-left">
+                <img class="item-img" src="images/veg_spring_roll.jpg" alt="Veg Spring Roll">
+                <span class="item-name">Veg Spring Roll (4pcs)</span>
+            </div>
             <span class="item-price">US$7.50</span>
         </div>
         <div class="menu-item">
@@ -128,16 +159,22 @@
             <span class="item-price">US$8.95</span>
         </div>
         <div class="menu-item">
-            <span class="item-name">French Fries</span>
+            <div class="item-left">
+                <img class="item-img" src="images/french_fries.jpg" alt="French Fries">
+                <span class="item-name">French Fries</span>
+            </div>
             <span class="item-price">US$5.25</span>
         </div>
         <div class="menu-item">
-            <span class="item-name">Crab Rangoon (4pcs)</span>
+            <div class="item-left">
+                <img class="item-img" src="images/crab_rangoon.jpg" alt="Crab Rangoon">
+                <span class="item-name">Crab Rangoon (4pcs)</span>
+            </div>
             <span class="item-price">US$7.95</span>
         </div>
     </div>
 
-    <!-- Rice & Pasta -->
+    <!-- Rice & Pasta 完全和你原来的一样，没改动 -->
     <div class="category-section">
         <h2 class="category-title">Rice & Pasta</h2>
         <div class="menu-item">
@@ -166,7 +203,7 @@
         </div>
     </div>
 
-    <!-- Seafood Boils -->
+    <!-- Seafood Boils 完全原样 -->
     <div class="category-section">
         <h2 class="category-title">Seafood Boils</h2>
         <div class="menu-item">
@@ -207,7 +244,7 @@
         </div>
     </div>
 
-    <!-- Value Combos -->
+    <!-- Value Combos 完全原样 -->
     <div class="category-section">
         <h2 class="category-title">Value Combos</h2>
         <div class="menu-item">
@@ -232,7 +269,7 @@
         </div>
     </div>
 
-    <!-- Beverages -->
+    <!-- Beverages 完全原样 -->
     <div class="category-section">
         <h2 class="category-title">Beverages</h2>
         <div class="menu-item">
