@@ -18,7 +18,7 @@ max-width: 900px;
 margin: 0 auto;
 padding: 30px 20px;
 }
-/* Menu Header：招牌图 + 下面小字 */
+/* Header 招牌图+小字 */
 .menu-header {
 text-align: center;
 margin-bottom: 50px;
@@ -38,7 +38,34 @@ opacity: 0.95;
 color: #aaa;
 font-size: 16px;
 }
-/* Category Section */
+/* 分类标题 + 右侧下单按钮 */
+.category-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 2px solid #444;
+padding-bottom: 12px;
+margin-bottom: 20px;
+}
+.category-title {
+font-size: 24px;
+color: #ff7722;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+.order-small-btn {
+background-color: #ff4500;
+color: white;
+padding: 4px 12px;
+border-radius: 6px;
+text-decoration: none;
+font-size: 13px;
+transition: background 0.2s;
+}
+.order-small-btn:hover {
+background-color: #ff6347;
+}
+/* 分类区块 */
 .category-section {
 background-color: #262626;
 border-radius: 12px;
@@ -46,16 +73,7 @@ padding: 25px 30px;
 margin-bottom: 30px;
 box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
-.category-title {
-font-size: 24px;
-color: #ff7722;
-border-bottom: 2px solid #444;
-padding-bottom: 12px;
-margin-bottom: 20px;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-/* Menu Item Row 带图片布局 */
+/* 菜品行 */
 .menu-item {
 display: flex;
 justify-content: space-between;
@@ -92,7 +110,34 @@ color: #e0e0e0;
 color: #ffdd99;
 font-weight: bold;
 }
-/* Mobile Responsive */
+/* 底部大下单按钮 */
+.bottom-order-area {
+text-align: center;
+margin: 40px 0 20px;
+}
+.bottom-order-btn {
+display: inline-block;
+background-color: #ff4500;
+color: white;
+padding: 14px 40px;
+border-radius: 8px;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+transition: background 0.2s;
+}
+.bottom-order-btn:hover {
+background-color: #ff6347;
+}
+/* 取货地址样式 */
+.pickup-address {
+text-align: center;
+color: #cccccc;
+font-size: 15px;
+margin-bottom: 40px;
+line-height: 1.6;
+}
+/* 移动端适配 */
 @media (max-width: 600px) {
 .category-section {
 padding: 18px 20px;
@@ -107,12 +152,15 @@ font-size: 15px;
 width: 40px;
 height: 40px;
 }
+.order-small-btn {
+font-size: 12px;
+padding: 3px 10px;
+}
 }
 </style>
 </head>
 <body>
 <div class="menu-header">
-<!-- 已改成 PNG 格式 -->
 <a href="images/header_banner.png" target="_blank">
 <img class="header-banner" src="images/header_banner.png" alt="Cajun Bay Boil Seafood">
 </a>
@@ -121,7 +169,10 @@ height: 40px;
 
 <!-- Appetizers -->
 <div class="category-section">
+<div class="category-header">
 <h2 class="category-title">Appetizers</h2>
+<a href="https://order.online/business/cajun-bay-boil-seafood-20827002" target="_blank" class="order-small-btn">Order Now</a>
+</div>
 <div class="menu-item">
 <div class="item-left">
 <a href="images/edamame.jpg" target="_blank">
@@ -159,7 +210,9 @@ height: 40px;
 <span class="item-price">US$7.50</span>
 </div>
 <div class="menu-item">
-<span class="item-name">Chicken Kara-age</span>
+<div class="item-left">
+<span class="item-name">Chicken Kara‑age</span>
+</div>
 <span class="item-price">US$8.95</span>
 </div>
 <div class="menu-item">
@@ -184,7 +237,10 @@ height: 40px;
 
 <!-- Rice & Pasta -->
 <div class="category-section">
+<div class="category-header">
 <h2 class="category-title">Rice & Pasta</h2>
+<a href="https://order.online/business/cajun-bay-boil-seafood-20827002" target="_blank" class="order-small-btn">Order Now</a>
+</div>
 <div class="menu-item">
 <div class="item-left">
 <a href="images/beef_fried_rice.jpg" target="_blank">
@@ -231,14 +287,19 @@ height: 40px;
 <span class="item-price">US$13.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
 <span class="item-name">Side Fire Rice</span>
+</div>
 <span class="item-price">US$4.62</span>
 </div>
 </div>
 
 <!-- Seafood Boils -->
 <div class="category-section">
+<div class="category-header">
 <h2 class="category-title">Seafood Boils</h2>
+<a href="https://order.online/business/cajun-bay-boil-seafood-20827002" target="_blank" class="order-small-btn">Order Now</a>
+</div>
 <div class="menu-item">
 <div class="item-left">
 <a href="images/live_crawfish_1lb.jpg" target="_blank">
@@ -276,7 +337,9 @@ height: 40px;
 <span class="item-price">US$26.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
 <span class="item-name">Headless Peeled Shrimp 1LB</span>
+</div>
 <span class="item-price">US$22.25</span>
 </div>
 <div class="menu-item">
@@ -298,18 +361,25 @@ height: 40px;
 <span class="item-price">US$16.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
 <span class="item-name">Scallop 1LB</span>
+</div>
 <span class="item-price">US$35.25</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
 <span class="item-name">Lobster Tail (1pc 6oz)</span>
+</div>
 <span class="item-price">US$21.50</span>
 </div>
 </div>
 
 <!-- Value Combos -->
 <div class="category-section">
+<div class="category-header">
 <h2 class="category-title">Value Combos</h2>
+<a href="https://order.online/business/cajun-bay-boil-seafood-20827002" target="_blank" class="order-small-btn">Order Now</a>
+</div>
 <div class="menu-item">
 <div class="item-left">
 <a href="images/combo_1.jpg" target="_blank">
@@ -347,14 +417,19 @@ height: 40px;
 <span class="item-price">US$34.50</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
 <span class="item-name">Combo 5</span>
+</div>
 <span class="item-price">US$43.99</span>
 </div>
 </div>
 
 <!-- Beverages -->
 <div class="category-section">
+<div class="category-header">
 <h2 class="category-title">Beverages</h2>
+<a href="https://order.online/business/cajun-bay-boil-seafood-20827002" target="_blank" class="order-small-btn">Order Now</a>
+</div>
 <div class="menu-item">
 <div class="item-left">
 <a href="images/pepsi_bottle.jpg" target="_blank">
@@ -365,13 +440,15 @@ height: 40px;
 <span class="item-price">US$2.85</span>
 </div>
 <div class="menu-item">
+<div class="item-left">
 <span class="item-name">Voss Still Water, 500mL</span>
+</div>
 <span class="item-price">US$3.55</span>
 </div>
 <div class="menu-item">
 <div class="item-left">
 <a href="images/crab_cracker_tool.png" target="_blank">
-<img class="item-img" src="images/crab_cracker_tool.png" alt="Crab Cracker (Tool)">
+<img class="item-img" src="images/crab_cracker_tool.png" alt="Crab Cracker">
 </a>
 <span class="item-name">Crab Cracker (Tool)</span>
 </div>
@@ -380,12 +457,22 @@ height: 40px;
 <div class="menu-item">
 <div class="item-left">
 <a href="images/poppi_sparkling_prebiotic.png" target="_blank">
-<img class="item-img" src="images/poppi_sparkling_prebiotic.png" alt="Poppi Sparkling Prebiotic">
+<img class="item-img" src="images/poppi_sparkling_prebiotic.png" alt="Poppi Sparkling">
 </a>
 <span class="item-name">Poppi Sparkling Prebiotic</span>
 </div>
 <span class="item-price">US$2.49</span>
 </div>
 </div>
+
+<!-- 页面最底部大下单按钮 + 取货地址 -->
+<div class="bottom-order-area">
+<a href="https://order.online/business/cajun-bay-boil-seafood-20827002" target="_blank" class="bottom-order-btn">Order Now</a>
+</div>
+<div class="pickup-address">
+<strong>Pickup Address:</strong><br>
+1025 N Central Expy #100, Plano, TX 75075
+</div>
+
 </body>
 </html>
